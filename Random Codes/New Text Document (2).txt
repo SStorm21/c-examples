@@ -1,0 +1,4 @@
+Links :
+
+Discord.py : https://pypi.org/project/discord.py/
+discord devPortal : https://discord.com/developers/docs/intro

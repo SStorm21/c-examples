@@ -1,0 +1,1 @@
+#internet options > connections > LAN settings > use a proxy server > 127.0.0.1:9050
