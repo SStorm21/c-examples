@@ -1,0 +1,30 @@
+import tkinter as tk
+
+class <link>STK</link>:
+    def __init__(self, twich):
+        self.twich = twich
+        self.twich.title("Twitch")
+        self.twich.geometry("1880x732")  # Specify window dimensions as a string
+        self.twich.resizable(True, True)
+
+        # You don't need to call pack() and mainloop() in the __init__ method
+        # It's better to call mainloop() outside the class
+
+twich = tk.Tk()
+main = <link>STK</link>(twich)
+twich.mainloop()
+
+from tkinter import *
+from tkinter import ttk
+import tkinter as tk
+
+class ST:
+    def __init__(self,twich):
+        self.twich=twich
+        self.twich=Tk()
+        self.twich.geometry("1880,732")
+        self.twich.title("Twitch")
+        self.twich.resizable(True,True)
+
+main = ST(twich)
+

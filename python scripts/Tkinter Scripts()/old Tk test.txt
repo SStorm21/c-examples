@@ -1,0 +1,120 @@
+from tkinter import *
+from tkinter import ttk
+from tkinter import Tk, BOTH, Menu
+
+#main body
+root = Tk()
+root.geometry("1920x1080+-10+0")
+root.resizable(True,True)
+root.minsize(900,500)
+root.maxsize(1920,1080)
+root.title("user-cl")
+root.config(bg="red")
+#Frames
+
+fr1 = Frame(root,bg="black",width="800",height="700")
+fr2 = Frame(root,bg="black",width="1090",height="700")
+fr3 = Frame(root,bg="black",width="1900",height="300")
+#Place for Frames
+fr1.place(x=10,y=10)
+fr2.place(x=820,y=10)
+fr3.place(x=10,y=720)
+#Labels
+lb1 = Label(fr1,text="Search",font=("Arial",30),fg="red",bg="black")
+lb2 = Label(fr2,text="User List",font=("Arial",30),fg="red",bg="black")
+lbs = Label(fr1,text="𝙎𝙩𝙤𝙧𝙢𝙐𝙄",font=("Arial",30),fg="red",bg="black")
+lb3 = Label(fr3,text="Network settings",font=("Arial",30),fg="red",bg="black" )
+#place for labels
+lb1.place(x=90,y=40)
+lb2.place(x=450,y=40)
+lbs.place(x=600,y=90)
+lb3.place(x=40,y=10)
+#Entry
+en1 = Entry(fr1,bg="red",fg="black",justify="left",font=("Arial",20))
+en1.place(x=80,y=100)
+#listbox
+lis1 = Listbox(fr1,bg="red",fg="black",font=("Arial"),width="70",height="25")
+lis1.insert(0,"user 1 ")
+lis1.insert(0,"user 2 ")
+lis1.insert(0,"user 3 ")
+lis1.insert(0,"user 4 ")
+lis1.insert(0,"user 5 ")
+lis1.insert(0,"user 6 ")
+lis1.place(x=80,y=150)
+
+#radio Button
+rid1 = Radiobutton(fr1,fg="red",bg="black",value=1,text="male names",font=("Arial",15))
+rid2 = Radiobutton(fr1,fg="red",bg="black",value=1,text="female names",font=("Arial",15))
+
+#radio places
+rid1.place(x=575,y=650)
+rid2.place(x=420,y=650)
+
+#buttons
+btn1 = Button(fr1,text=">",fg="black",bg="red",font=("Arial"),height="1",borderwidth="4")
+
+#buttons places
+btn1.place(x=400,y=100)
+#comb list
+style= ttk.Style()
+style.theme_use('clam')
+style.configure("TCombobox", fg= "red", background= "red")
+
+comb1 = ttk.Combobox(fr2,font=("Arial"),height="100",width="70",value=("user1","user2","user4","user5","user","user","user","user","user","user","user "),state="readonly")
+
+#combo places
+comb1.place(x=200,y=100)
+
+#Menu Button
+
+mn = Menubutton(fr3, text="Protocols", relief="groove", font=("Arial",10),height="2",width="30",fg="black",bg="red")
+mn.menu = Menu(mn, tearoff=0)
+mn["menu"] = mn.menu
+mn.menu.add_checkbutton(label="TCP")
+mn.menu.add_checkbutton(label="UDP")
+mn.menu.add_checkbutton(label="SCP")
+mn.menu.add_checkbutton(label="DHCP")
+
+mn2 = Menubutton(fr3, text="servers", relief="groove", font=("Arial",10),height="2",width="30",fg="black",bg="red")
+mn2.menu = Menu(mn2, tearoff=0)
+mn2["menu"] = mn2.menu
+mn2.menu.add_checkbutton(label="random")
+mn2.menu.add_checkbutton(label="random")
+mn2.menu.add_checkbutton(label="random")
+mn2.menu.add_checkbutton(label="random")
+
+mn3 = Menubutton(fr3, text="none", relief="groove", font=("Arial",10),height="2",width="30",fg="black",bg="red")
+mn3.menu = Menu(mn3, tearoff=0)
+mn3["menu"] = mn3.menu
+mn3.menu.add_checkbutton(label="random")
+mn3.menu.add_checkbutton(label="random")
+mn3.menu.add_checkbutton(label="random")
+mn3.menu.add_checkbutton(label="random")
+
+mn4 = Menubutton(fr3, text="none2", relief="groove", font=("Arial",10),height="2",width="30",fg="black",bg="red")
+mn4.menu = Menu(mn4, tearoff=0)
+mn4["menu"] = mn4.menu
+mn4.menu.add_checkbutton(label="random")
+mn4.menu.add_checkbutton(label="random")
+mn4.menu.add_checkbutton(label="random")
+mn4.menu.add_checkbutton(label="random")
+#menu buttons palces
+mn.place(x=10, y=90)
+mn2.place(x=240, y=90)
+mn3.place(x=240, y=150)
+mn4.place(x=10, y=150)
+
+#menu
+menubar = Menu(root)
+file_menu = Menu(menubar, tearoff=0,bg="red",fg="black",font=("Arial",13))
+
+file_menu.add_command(label="New")
+file_menu.add_command(label="Edit")
+file_menu.add_command(label="Save")
+file_menu.add_command(label="Save As")
+
+menubar.add_cascade(label="File", menu=file_menu)
+root.config(menu=menubar)
+
+
+root.mainloop()

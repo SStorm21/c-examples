@@ -1,0 +1,19 @@
+def cac(number,method,number2):
+    number = int(number)
+    number2 = int(number2)
+    if method == "*":
+        print(number * number2)
+    elif method == "/":
+        print(number / number2)
+    elif method =="//":
+        print(number // number2)
+    elif method == "+":
+        print(number + number2)
+    elif method == "-":
+        print(number - number2)
+    elif method == "**":
+        print(number ** number2)
+    else:
+        ("Error uknown method !")
+cac(2,"**",3)
+

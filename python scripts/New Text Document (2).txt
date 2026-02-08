@@ -1,0 +1,9 @@
+from customtkinter import *
+import os
+
+root = CTk()
+TR = os.system('start cmd')
+frame = CTkFrame(root).pack(fill=BOTH)
+label = CTkLabel(frame,text=TR).place()
+
+root.mainloop()

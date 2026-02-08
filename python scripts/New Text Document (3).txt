@@ -1,0 +1,9 @@
+
+#if password == 'كلمة السر':
+#مدخل الرسالة 
+message = input("message >")
+#تشفير الرسالة
+encode_message = message.encode("ascii") #نوع التشفير
+base64_bytes=base64.base64encode(encode_message) # ترميز الرسالة الى بيس 64 و هذا ليس تشفير
+encoded_message=base64_bytes.decode('ascii') # ترميز  الرسالة 
+اي اعادتها للهيئة الأصلية في اخر سطر
