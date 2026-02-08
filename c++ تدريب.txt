@@ -1,0 +1,196 @@
+#include<iostream>
+using namespace std;
+int main(){
+//اول مثال عن المتغيرات
+int $age = 18;
+string $name = "storm";
+string $contry = "Iraq";
+cout<<"my name is "<<$name<<" i am "<<$age<<" i live in "<<$contry<<endl;
+cout<<"-----------------------------------------------------------";
+// ثاني مثال عن المدخلات
+short $$age =20;
+string $$name = "random";
+float $numb = 90.23;
+double $numbScoreIn3Y = 88.9284842;
+char x = 'R';
+cout<<"Please Enter Your data "<<endl;
+cout<<"how old are you? >";
+cin>>$age;
+cout<<"\n what is ur full name? >";
+cin>>$name;
+cout<<"\n what is your last 3y score number?(duoble) >";
+cin>>$numbScoreIn3Y;
+cout<<"\nPlease insert Your last year score(flaot)>";
+cin>>$numb;
+cout<<"Your gender is? >\n";
+cin>>x;
+cout<<"results------------\n";
+cout<<"Your name :\n"<<$$name;
+cout<<"Your Last 3y score :\n"<<$numbScoreIn3Y;
+cout<<"Your last Year score :\n"<<$numb;
+cout<<"Your age :\n"<<$$age;
+cout<<"Your Gender is :\n"<<x;
+
+}
+
+تدريب لأستخدام الفانكشنز و فنكشن فويد 
+
+#include <iostream>
+using namespace std;
+
+void data(int a, int b){
+    
+    cout<<"a + b ="<<a+b<<endl;
+}
+
+int main(){
+    
+    data(10,20);
+    return 0;
+}
+
+/*int data (int a,int b){
+    return a+b;
+}
+int main(){
+    
+    cout<<data(10,50);
+    
+    return 0;
+}
+*/
+
+قسم X
+استخدام تأكيد المدخل بمثال الأرقام الثلاث الأكبر
+
+#include <iostream>
+using namespace std;
+int t = 1;
+int x = 10; 
+int y = 20;
+int z = 30;
+int A = 40;
+int main(){
+    
+    cout<<"we will find the biggest numbers btween x,y,z"<<endl;
+    cout<<t<<":: ";
+    (x>=A)?cout<<"X is the beggest number":cout<<"x is not the number\n";
+    cout<<t++<<":: ";
+    (y>=A)?cout<<"Y is the grater number":cout<<"y is not the number\n";
+    cout<<t++<<":: ";
+    (z>=A)?cout<<"Z is the grater number":cout<<"z is not the number\n";
+    cout<<t++<<":: ";
+    (A>=A)?cout<<"A is the number!":cout<<"A is not the number\n";    
+}
+#include <iostream>
+using namespace std;
+
+int numbers(int x, int y , int z,int A,int t){
+    
+    cout<<"\nwe will find the biggest numbers btween x,y,z"<<endl;
+    cout<<t<<":: ";
+    (x>=A)?cout<<"X is the beggest number":cout<<"x is not the number\n";
+    cout<<t++<<":: ";
+    (y>=A)?cout<<"Y is the grater number":cout<<"y is not the number\n";
+    cout<<t++<<":: ";
+    (z>=A)?cout<<"Z is the grater number":cout<<"z is not the number\n";
+    cout<<t++<<":: ";
+    (A>=A)?cout<<"A is the number!":cout<<"A is not the number\n";
+    
+}
+int main(){
+    numbers(10,20,30,40,1);
+    numbers(20,30,40,50,1);
+    return 0;
+}
+
+
+تدريب الأكبر و الأصغر 
+//test
+#include<iostream>
+using namespace std;
+int main()
+{
+    //couts
+    int $n = 12;
+    string $p= " users ";
+    
+    cout<<"this is a test\n";
+    cout<<"there are "<<$n<<$p<<" ih this server"<<endl;
+    //Cins
+    int $A = 20;
+    string $N = "random";
+    
+    cout<<"Enter Your Name > ";
+    cin>>$N;
+    cout<<"Enter Your Age > ";
+    cin>>$A;
+    
+    cout<<"---Data---\n";
+    cout<<"USR data :"<<$N<<"-"<<$A<<endl;
+    cout<<"----------\n";
+    //numbers
+    int x = 5;
+    int y = 10;
+    
+    cout<<(x+y);
+    cout<<"is 10 bigger than 5? if 0 no if 1 yes lets see \n";
+    cout<<(x>y);
+    // and + or && ||
+    cout<<(x<y && y<x)<<endl;
+    cout<<(x<y || y<x)<<endl;
+    cout<<(x==y)<<endl;
+    cout<<(x!=y)<<endl;
+    
+    //if 
+    int $a = 12;
+    cout<<"Enter Your Age :";
+    cin>>$a;
+    if ($a<18)
+    {
+        cout<<"You are not allowed to be here!";
+    }
+    else if ($a>18)
+    {
+        cout<<"welcome to the internet :) have a look around!";
+    }
+    else
+    {
+        cout<<"stfu";
+        
+    }
+    return 0;
+    
+}
+
+مثال عن البروتوتايب
+
+#include<iostream>
+using namespace std;
+int sum(int y,int x);
+
+int main()
+{
+    sum(10,11);
+    return 0;
+}
+int sum(int y,int x){
+    
+    cout<<y+x;
+}
+
+
+الدوال العشوائية 
+#include <iostream>
+using namespace std;
+#include <stdlib.h>
+#include <ctime>
+int main()
+{
+    srand(time(0));
+    for(int i=1;i<=10;i++)
+    {
+        cout<<rand()%1<<endl;
+        return 0;
+    }
+}
